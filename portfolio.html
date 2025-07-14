@@ -29,7 +29,7 @@
       }
 
       .container {
-        margin: 0 auto;
+        margin: 10rem auto;
       }
 
       .wave-emoji {
@@ -70,8 +70,9 @@
       }
 
       .greeting-text-p {
-        font-size: 30px;
+        font-size: 24px;
         line-height: 40px;
+        margin: 1.5rem 0 1rem 0;
       }
 
       .greeting-text {
@@ -80,12 +81,7 @@
         color: #000 !important;
       }
 
-      .greeting-text-p {
-        font-size: 30px;
-        line-height: 40px;
-      }
-
-      .subTitle {
+      .sub-title {
         color: #868e96 !important;
       }
 
@@ -96,8 +92,15 @@
         .greeting-text-p {
           font-size: 20px;
         }
+
+        .container {
+          margin: 7rem auto;
+        }
       }
       @media (max-width: 768px) {
+        .container {
+          margin: 4rem auto;
+        }
         .button-greeting-div {
           justify-content: space-around;
         }
@@ -118,17 +121,20 @@
         }
       }
 
-      .skills-heading {
+      .heading {
         font-size: 56px;
         font-weight: 400;
       }
-      .skills-text-subtitle {
-        font-size: 19px;
-        text-align: center;
+      .text-sub-title {
+        font-size: 22px;
       }
 
-      .subTitle {
+      .sub-title {
         color: #868e96;
+      }
+
+      .mark {
+        color: #014f86;
       }
 
       .what_i_do-icon {
@@ -149,15 +155,10 @@
       }
 
       /*** education ***/
-      .education-heading {
-        font-size: 56px;
-        font-weight: 400;
-      }
 
       .education-section {
         display: flex;
         flex-direction: column;
-        width: 90%;
         padding: 20px 0px;
         margin: 0px auto;
         margin-top: 2rem;
@@ -178,12 +179,11 @@
         .education-card-container {
           padding-top: 0px;
         }
-        .education-heading {
+        .heading {
           font-size: 40px;
         }
-        .education-text-subtitle {
+        .text-sub-title {
           font-size: 18px;
-          text-align: center;
         }
       }
 
@@ -191,11 +191,11 @@
         .education-card-container {
           padding-top: 0px;
         }
-        .education-heading {
+        .heading {
           font-size: 30px;
           text-align: center;
         }
-        .education-text-subtitle {
+        .text-sub-title {
           font-size: 16px;
         }
       }
@@ -333,6 +333,45 @@
         }
       }
 
+      .main-button {
+        background-color: #014f86;
+        border: solid 1px #014f86;
+        color: #fff;
+        font-weight: 700;
+        width: max-content;
+        padding: 13px 22px;
+        margin-right: 2.5rem;
+        text-transform: uppercase;
+        border-radius: 6px;
+        text-align: center;
+        text-decoration: none;
+        display: block;
+        margin-top: 20px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out 0s;
+      }
+      .main-button:hover {
+        background-color: #ffffff;
+        color: #014f86;
+        transition: all 0.3s ease 0s;
+        transform: translateY(-3px);
+      }
+
+      /* Media Query */
+      @media (max-width: 768px) {
+        .main-button {
+          font-size: 0.938rem;
+          padding: 12px 18px;
+          margin-right: 0px;
+        }
+      }
+      @media (max-width: 320px) {
+        .main-button {
+          font-size: 0.75rem;
+        }
+      }
+
       .card-image {
         max-width: 100%;
         height: auto;
@@ -345,7 +384,7 @@
         font-weight: 700;
         margin: 15px 0 0 0;
       }
-      .card-subtitle {
+      .card-sub-title {
         color: #666666;
         font-size: 1.063rem;
         line-height: 1.5rem;
@@ -366,9 +405,7 @@
       .certificate-card:hover {
         box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px -10px;
       }
-      .dark-mode.certificate-card:hover {
-        box-shadow: rgba(255, 255, 255, 0.2) 0px 20px 30px -10px;
-      }
+
       .certificate-image-div {
         position: relative;
         height: 250px;
@@ -408,6 +445,44 @@
       span.certificate-tag:hover {
         background: #8c43ce;
       }
+
+      .contact-desc {
+        font-size: 1.25rem;
+      }
+
+      .skill-card {
+        background-color: #fff;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 30px -15px;
+        padding: 1.5rem;
+        border-radius: 10px;
+        border: 1px solid rgba(211, 211, 211, 0.397);
+        width: 340px;
+        transition: all 0.3s ease-in-out 0s;
+      }
+
+      .hover-primary:hover {
+        background-color: #014f86;
+        transition: all 0.3s ease 0s;
+        transform: translateY(-3px);
+      }
+
+      .skill-card_title {
+        min-width: max-content;
+      }
+
+      .skill-card:hover .skill-card_title,
+      .skill-card:hover .skill-card_desc,
+      .skill-card:hover .skill-card_icon {
+        color: #fff !important;
+      }
+
+      .skill-card:hover .skill-card_border-icon {
+        border-color: #fff !important;
+      }
+
+      .skill-card_border-icon {
+        border-color: #014f86;
+      }
     </style>
   </head>
   <body>
@@ -444,36 +519,25 @@
       <div class="container flex justify-between gap-3">
         <div class="w-1/2">
           <h1 class="greeting-text font-medium">
-            Hi all, I'm Vanhas
-            <span class="wave-emoji">👋</span>
+            Hi all, I'm Nghĩa <span class="wave-emoji">👋</span>
           </h1>
-          <p class="greeting-text-p subTitle">
-            A passionate Full Stack Software Developer
-            <img
-              alt="🚀"
-              draggable="false"
-              src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/72x72/1f680.png"
-              style="
-                height: 1em;
-                width: 1em;
-                margin: 0px 0.05em 0px 0.1em;
-                vertical-align: -0.1em;
-              "
-            />
-            having an experience of building Web and Mobile applications with
-            JavaScript / Reactjs / Nodejs / React Native and some other cool
-            libraries and frameworks.
+          <p class="greeting-text-p sub-title">
+            Developer with 2 years of experience in Angular and .NET Core. Fast
+            learner and adaptable, with a passion for clean code. A
+            problem-solver with a growth mindset, effective both independently
+            and in collaborative teams.
           </p>
+
           <div>
-            <div class="button-greeting-div">
-              <a href="#contact">
+            <div class="button-greeting-div flex">
+              <a class="main-button" href="#contact">
                 <button>Contact me</button>
               </a>
 
               <a
                 href="assets/resume.pdf"
                 download="Resume.pdf"
-                class="download-link-button"
+                class="download-link-button main-button"
               >
                 <button>Download my resume</button>
               </a>
@@ -489,15 +553,15 @@
 
     <section id="what_i_do">
       <div class="container flex justify-between gap-3">
-        <div class="w-1/2">
+        <div class="w-1/2 pe-[8rem] ps-[4rem]">
           <div class="greeting-image-div" id="lottie-what_i_do"></div>
         </div>
         <div class="w-1/2">
-          <h2 class="skills-heading">What I do</h2>
-          <div class="subTitle skills-text-subtitle">
-            CRAZY FULL STACK DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK
+          <h2 class="heading">What I do</h2>
+          <div class="sub-title text-sub-title pt-[1rem]">
+            Passionate full stack developer exploring diverse tech stacks
           </div>
-          <div class="flex flex-wrap gap-3">
+          <div class="flex flex-wrap gap-3 my-12">
             <div class="mx-3">
               <i class="what_i_do-icon fa-brands fa-html5"></i>
               <p class="what_i_do-icon_text">Html-5</p>
@@ -549,60 +613,149 @@
               <p class="what_i_do-icon_text">Tailwind css</p>
             </div>
           </div>
+
+          <ul>
+            <li class="my-4">
+              <p class="sub-title text-xl mark">
+                <i class="mark fa-solid fa-bolt"></i> Angular & .NET Core
+                developer with a passion for full-stack web development
+              </p>
+            </li>
+            <li class="my-4">
+              <p class="sub-title text-xl">
+                <i class="mark fa-solid fa-bolt"></i> Build modern, responsive,
+                and user-friendly web applications
+              </p>
+            </li>
+            <li class="my-4">
+              <p class="sub-title text-xl">
+                <i class="mark fa-solid fa-bolt"></i> Write clean, maintainable,
+                and scalable code for long-term projects
+              </p>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
 
     <section id="tech-stack" class="mt-[6rem]">
-      <div class="container flex justify-between gap-3">
-        <div class="w-1/2">
-          <h1 class="greeting-text font-medium">
-            Hi all, I'm Vanhas
-            <span class="wave-emoji">👋</span>
-          </h1>
-          <p class="greeting-text-p subTitle">
-            A passionate Full Stack Software Developer
-            <img
-              alt="🚀"
-              draggable="false"
-              src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/72x72/1f680.png"
-              style="
-                height: 1em;
-                width: 1em;
-                margin: 0px 0.05em 0px 0.1em;
-                vertical-align: -0.1em;
-              "
-            />
-            having an experience of building Web and Mobile applications with
-            JavaScript / Reactjs / Nodejs / React Native and some other cool
-            libraries and frameworks.
-          </p>
-          <div>
-            <div class="button-greeting-div">
-              <a href="#contact">
-                <button>Contact me</button>
-              </a>
-
-              <a
-                href="assets/resume.pdf"
-                download="Resume.pdf"
-                class="download-link-button"
-              >
-                <button>Download my resume</button>
-              </a>
+      <div class="container flex justify-between flex-wrap">
+        <div class="pt-12">
+          <div class="flex flex-wrap justify-between gap-4">
+            <div class="skill-card hover-primary">
+              <div class="flex justify-between items-center my-2">
+                <p class="skill-card_title font-medium text-2xl">Tech stack</p>
+                <div
+                  class="skill-card_border-icon w-12 h-12 rounded-[100%] border-1 flex justify-center items-center"
+                >
+                  <i
+                    class="skill-card_icon text-xl mark fa-solid fa-laptop-code"
+                  ></i>
+                </div>
+              </div>
+              <p class="skill-card_desc sub-title">
+                Angular 18, Tailwind CSS, ASP.NET Core 8, SQL Server
+              </p>
+            </div>
+            <div class="skill-card hover-primary">
+              <div class="flex justify-between items-center my-2">
+                <p class="skill-card_title font-medium text-2xl">
+                  Tools & Workflow
+                </p>
+                <div
+                  class="skill-card_border-icon w-12 h-12 rounded-[100%] border-1 flex justify-center items-center"
+                >
+                  <i
+                    class="skill-card_icon text-xl mark fa-solid fa-trowel-bricks"
+                  ></i>
+                </div>
+              </div>
+              <p class="skill-card_desc sub-title">
+                Git, Bitbucket, Jira, Agile/Scrum
+              </p>
+            </div>
+            <div class="skill-card hover-primary">
+              <div class="flex justify-between items-center my-2">
+                <p class="skill-card_title font-medium text-2xl">
+                  State Management
+                </p>
+                <div
+                  class="skill-card_border-icon w-12 h-12 rounded-[100%] border-1 flex justify-center items-center"
+                >
+                  <i
+                    class="skill-card_icon text-xl mark fa-solid fa-chart-simple"
+                  ></i>
+                </div>
+              </div>
+              <p class="skill-card_desc sub-title">
+                Signals, NgRx, RxJS, Reactive Forms
+              </p>
+            </div>
+          </div>
+          <div class="flex flex-wrap justify-between mt-4 gap-4">
+            <div class="skill-card hover-primary">
+              <div class="flex justify-between items-center my-2">
+                <p class="skill-card_title font-medium text-2xl">API & Auth</p>
+                <div
+                  class="skill-card_border-icon w-12 h-12 rounded-[100%] border-1 flex justify-center items-center"
+                >
+                  <i
+                    class="skill-card_icon text-xl mark fa-brands fa-connectdevelop"
+                  ></i>
+                </div>
+              </div>
+              <p class="skill-card_desc sub-title">
+                RESTful APIs, JWT, Middleware, Exception Handling
+              </p>
+            </div>
+            <div class="skill-card hover-primary">
+              <div class="flex justify-between items-center my-2">
+                <p class="skill-card_title font-medium text-2xl">Testing</p>
+                <div
+                  class="skill-card_border-icon w-12 h-12 rounded-[100%] border-1 flex justify-center items-center"
+                >
+                  <i
+                    class="skill-card_icon text-xl mark fa-solid fa-list-check"
+                  ></i>
+                </div>
+              </div>
+              <p class="skill-card_desc sub-title">
+                xUnit, Postman, Testing Library, Swagger
+              </p>
+            </div>
+            <div class="skill-card hover-primary">
+              <div class="flex justify-between items-center my-2">
+                <p class="skill-card_title font-medium text-2xl">Others</p>
+                <div
+                  class="skill-card_border-icon w-12 h-12 rounded-[100%] border-1 flex justify-center items-center"
+                >
+                  <i
+                    class="skill-card_icon text-xl mark fa-solid fa-expand"
+                  ></i>
+                </div>
+              </div>
+              <p class="skill-card_desc sub-title">
+                Gen AI, Problem Solving, Self-learning, Time Management
+              </p>
             </div>
           </div>
         </div>
 
-        <div class="w-1/2">
-          <div class="greeting-image-div" id="lottie_tech-stack"></div>
+        <div>
+          <div class="overflow-hidden">
+            <div
+              style="margin-left: -4rem"
+              class="w-[40rem] greeting-image-div"
+              id="lottie_tech-stack"
+            ></div>
+          </div>
         </div>
       </div>
     </section>
 
     <section id="education" class="container">
       <div class="education-section" id="education">
-        <h1 class="education-heading">Education</h1>
+        <h1 class="heading">Education</h1>
         <div class="education-card-container">
           <div class="education-card">
             <img
@@ -644,7 +797,7 @@
         </div>
         <div class="certificate-detail-div">
           <h5 class="card-title">{cardInfo.title}</h5>
-          <p class="card-subtitle">{cardInfo.description}</p>
+          <p class="card-sub-title">{cardInfo.description}</p>
         </div>
         <div class="certificate-card-footer"></div>
       </div>
@@ -654,7 +807,7 @@
         </div>
         <div class="certificate-detail-div">
           <h5 class="card-title">{cardInfo.title}</h5>
-          <p class="card-subtitle">{cardInfo.description}</p>
+          <p class="card-sub-title">{cardInfo.description}</p>
         </div>
         <div class="certificate-card-footer"></div>
       </div>
@@ -664,20 +817,34 @@
         </div>
         <div class="certificate-detail-div">
           <h5 class="card-title">{cardInfo.title}</h5>
-          <p class="card-subtitle">{cardInfo.description}</p>
+          <p class="card-sub-title">{cardInfo.description}</p>
         </div>
         <div class="certificate-card-footer"></div>
       </div>
     </section>
 
     <section id="contact" class="container">
-      <p class="text-4xl font-normal">Reach Out to me!</p>
+      <p class="heading">Reach Out to me!</p>
       <div class="flex">
-        <div>
+        <div class="contact-container">
+          <div class="sub-title text-sub-title">
+            I’m currently seeking new opportunities where I can contribute my
+            full-stack development skills, grow professionally, and work on
+            impactful projects. Feel free to reach out at
+            <span class="font-normal text-black">vanhspc@gmail.com</span>— I’m
+            always open to connecting and learning from new perspectives.
+          </div>
+          <p class="text-sub-title font-medium">
+            "Junior Full-Stack Developer | Software Developer"
+          </p>
 
+          <div class="social-media">
+            <a href=""><i class="fab fa-github"></i></a>
+            <a href=""><i class="fab fa-linkedin-in"></i></a>
+            <a href=""><i class="fa-solid fa-envelope"></i></a>
+            <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+          </div>
         </div>
-
-        <img src="" alt="">
       </div>
     </section>
   </body>
@@ -696,19 +863,19 @@
       });
 
       lottie.loadAnimation({
-        container: document.getElementById("lottie-what_i_do"),
-        renderer: "svg",
-        loop: true,
-        autoplay: true,
-        path: "assets/lottie/codingPerson.json",
-      });
-
-      lottie.loadAnimation({
         container: document.getElementById("lottie_tech-stack"),
         renderer: "svg",
         loop: true,
         autoplay: true,
-        path: "assets/lottie/build.json",
+        path: "assets/lottie/coding.json",
+      });
+
+      lottie.loadAnimation({
+        container: document.getElementById("lottie-what_i_do"),
+        renderer: "svg",
+        loop: true,
+        autoplay: true,
+        path: "assets/lottie/skill.json",
       });
     } else {
       document.getElementById("lottie-introduce").innerHTML = `
