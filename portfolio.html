@@ -138,9 +138,8 @@
       }
 
       .what_i_do-icon {
-        height: 48px;
-        font-size: 48px;
-        color: #868e96;
+        height: 60px;
+        font-size: 56px;
         margin: 0 auto;
       }
 
@@ -483,6 +482,262 @@
       .skill-card_border-icon {
         border-color: #014f86;
       }
+
+      .experience-title {
+        text-align: center;
+        margin-bottom: 80px;
+        font-size: 2em;
+        color: #014f86;
+        position: relative;
+        margin-top: 40px;
+        padding-bottom: 15px;
+        font-weight: 300;
+      }
+      .experience-title::after {
+        content: "";
+        height: 2px;
+        background-color: rgba(103, 58, 183, 0.2);
+        width: 160px;
+        left: 50%;
+        bottom: -18px;
+        transform: translateX(-50%);
+        position: absolute;
+      }
+      .experience-title::before {
+        content: "›";
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: #1774b6;
+        left: 50%;
+        margin-left: -8px;
+        transform: rotate(90deg);
+        box-shadow: 0 0 0 4px rgba(103, 58, 183, 0.2);
+        bottom: -25px;
+        font-size: 0.7em;
+        text-indent: 0px;
+        color: #fff;
+        line-height: 12px;
+        z-index: 9;
+      }
+      .timeline {
+        padding: 0px 5%;
+        max-width: 1300px;
+        margin: 0 auto;
+      }
+      .timeline > .timeline-item {
+        display: flex;
+        align-items: flex-start;
+      }
+      .timeline > .timeline-item > div {
+        flex: 1;
+        padding: 20px 40px;
+      }
+      .timeline > .timeline-item > div:last-child {
+        text-align: left;
+        padding-bottom: 40px !important;
+      }
+      .timeline > .timeline-item > div:first-child::after {
+        content: "";
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: #1774b6;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 0 0 4px rgba(103, 58, 183, 0.2);
+      }
+      .timeline > .timeline-item:nth-child(odd) > div:first-child {
+        text-align: right;
+        position: relative;
+      }
+      .timeline > .timeline-item:nth-child(odd) > div:first-child::after {
+        right: -17px;
+      }
+      .timeline > .timeline-item:nth-child(odd) > div:last-child {
+        text-align: left;
+        border-left: 2px solid #e0e0e0;
+      }
+      .timeline > .timeline-item:nth-child(odd) > .timeline-date > div {
+        margin-right: 0px;
+      }
+      .timeline > .timeline-item:nth-child(odd) > .timeline-date > img {
+        right: 11%;
+        left: inherit;
+      }
+      .timeline > .timeline-item:nth-child(odd) > .timeline-content > h2 {
+        text-align: left !important;
+      }
+      .timeline > .timeline-item:nth-child(odd) > .timeline-content > p > img {
+        right: 0;
+      }
+      .timeline > .timeline-item:nth-child(even) > div:first-child {
+        order: 2;
+        text-align: left;
+        position: relative;
+      }
+      .timeline > .timeline-item:nth-child(even) > div:first-child::after {
+        left: -1px;
+      }
+      .timeline > .timeline-item:nth-child(even) > div:last-child {
+        order: 1;
+        text-align: right;
+        border-right: 2px solid #e0e0e0;
+      }
+      .timeline > .timeline-item:nth-child(even) > .timeline-date > div {
+        margin-left: 0px;
+      }
+      .timeline > .timeline-item:nth-child(even) > .timeline-date > img {
+        left: 11%;
+        right: inherit;
+      }
+      .timeline > .timeline-item:nth-child(even) > .timeline-content > h2 {
+        text-align: right !important;
+      }
+      .timeline > .timeline-item:nth-child(even) > .timeline-content > p > img {
+        right: inherit;
+        left: 0;
+        transform-origin: bottom left;
+      }
+      .timeline
+        > .timeline-item:nth-child(even)
+        > .timeline-content
+        > p
+        > button {
+        left: inherit;
+        right: 15px;
+      }
+      .timeline > .timeline-item .timeline-date {
+        position: relative;
+      }
+      .timeline > .timeline-item .timeline-date > img {
+        position: absolute;
+        height: 300px;
+        opacity: 0.6;
+        transform-origin: center;
+        z-index: 1;
+        left: 11%;
+      }
+      .timeline > .timeline-item .timeline-date > div {
+        background-image: linear-gradient(
+          to right,
+          #184e77,
+          #1e6091,
+          #1a759f,
+          #168aad,
+          #34a0a4
+        );
+        z-index: 2 !important;
+        position: relative;
+        box-shadow: 0 10px 15px rgba(103, 58, 183, 0.3);
+        border-radius: 50px;
+        color: #ffffff;
+        text-align: center;
+        max-width: max-content;
+        margin: auto;
+        padding: 10px 30px;
+      }
+      .timeline > .timeline-item .timeline-content .fa-icon {
+        font-size: 80px;
+      }
+      .timeline > .timeline-item .timeline-content > h2 {
+        color: #014f86;
+        margin: 0px;
+        font-size: 1.3em;
+        font-weight: bold;
+        margin-top: 7px;
+      }
+      .timeline > .timeline-item .timeline-content > h2 span {
+        color: #673ab7;
+        font-weight: bold;
+        font-size: 0.6em;
+        letter-spacing: 2px;
+        margin-left: 5px;
+      }
+      .timeline > .timeline-item .timeline-content > p {
+        font-size: 0.9em;
+        padding: 20px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 10px 20px rgba(103, 58, 183, 0.08);
+        position: relative;
+        line-height: 25px;
+        padding-bottom: 60px;
+        min-height: 100px;
+      }
+      .timeline > .timeline-item .timeline-content > p > img {
+        width: 100px;
+        opacity: 0.05;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        transform-origin: bottom right;
+        transform: scale(1.8);
+      }
+      .timeline > .timeline-item .timeline-content > p > button {
+        background: no-repeat;
+        outline: none;
+        color: #673ab7;
+        border: none;
+        padding: 7px 15px;
+        position: absolute;
+        bottom: 15px;
+        border-radius: 30px;
+        left: 15px;
+        box-shadow: 0 0px 2px rgba(103, 58, 183, 0.1);
+        cursor: pointer;
+        letter-spacing: 1px;
+        font-size: 0.9em;
+        font-weight: normal;
+        transition: all 0.5s ease;
+      }
+      .timeline > .timeline-item .timeline-content > p > button:hover {
+        background: rgba(103, 58, 183, 0.7);
+        box-shadow: 0 5px 10px rgba(103, 58, 183, 0.1);
+        color: #ffffff;
+      }
+      @media (max-width: 767px) {
+        .timeline > .timeline-item {
+          flex-direction: column;
+          border-left: 2px solid #e0e0e0;
+        }
+        .timeline > .timeline-item .timeline-date > img {
+          display: none;
+        }
+        .timeline > .timeline-item > div {
+          border-width: 0px !important;
+          text-align: left !important;
+          order: unset !important;
+        }
+        .timeline > .timeline-item > div::after {
+          left: 0% !important;
+        }
+        .timeline > .timeline-item:nth-child(odd) > .timeline-content > h2 {
+          text-align: left !important;
+        }
+        .timeline > .timeline-item:nth-child(even) > .timeline-content > h2 {
+          text-align: left !important;
+        }
+        .timeline
+          > .timeline-item:nth-child(even)
+          > .timeline-content
+          > p
+          > img {
+          right: 0;
+          left: inherit;
+          transform-origin: bottom right;
+        }
+        .timeline
+          > .timeline-item:nth-child(even)
+          > .timeline-content
+          > p
+          > button {
+          left: 15px;
+          right: inherit;
+        }
+      }
     </style>
   </head>
   <body>
@@ -522,12 +777,58 @@
             Hi all, I'm Nghĩa <span class="wave-emoji">👋</span>
           </h1>
           <p class="greeting-text-p sub-title">
-            Developer with 2 years of experience in Angular and .NET Core. Fast
-            learner and adaptable, with a passion for clean code. A
-            problem-solver with a growth mindset, effective both independently
-            and in collaborative teams.
+            A full-stack web developer focused on building modern and
+            maintainable web applications with Angular and .NET Core. I'm driven
+            by curiosity, clean architecture, and the joy of turning complex
+            problems into elegant code.
           </p>
 
+          <div class="social-media flex my-4 mt-6">
+            <div class="me-3">
+              <a
+                href="#"
+                class="w-[2.5rem] h-[2.5rem] rounded-[100%] bg-black flex justify-center items-center"
+              >
+                <i class="text-white text-2xl fab fa-github"></i>
+              </a>
+            </div>
+
+            <div class="me-3">
+              <a
+                href="#"
+                class="w-[2.5rem] h-[2.5rem] rounded-[100%] bg-sky-700 flex justify-center items-center"
+              >
+                <i class="text-white text-xl fab fa-linkedin-in"></i>
+              </a>
+            </div>
+
+            <div class="me-3">
+              <a
+                href="#"
+                class="w-[2.5rem] h-[2.5rem] rounded-[100%] bg-red-500 flex justify-center items-center"
+              >
+                <i class="text-white text-xl fa-solid fa-envelope"></i>
+              </a>
+            </div>
+
+            <div class="me-3">
+              <a
+                href="#"
+                class="w-[2.5rem] h-[2.5rem] rounded-[100%] bg-cyan-700 flex justify-center items-center"
+              >
+                <i class="text-white text-xl fab fa-facebook-f"></i>
+              </a>
+            </div>
+
+            <div class="me-3">
+              <a
+                href="#"
+                class="w-[2.5rem] h-[2.5rem] rounded-[12px] overflow-hidden flex justify-center items-center"
+              >
+                <img src="/assets/images/ig.jpg" alt="" />
+              </a>
+            </div>
+          </div>
           <div>
             <div class="button-greeting-div flex">
               <a class="main-button" href="#contact">
@@ -556,39 +857,44 @@
         <div class="w-1/2 pe-[8rem] ps-[4rem]">
           <div class="greeting-image-div" id="lottie-what_i_do"></div>
         </div>
-        <div class="w-1/2">
-          <h2 class="heading">What I do</h2>
-          <div class="sub-title text-sub-title pt-[1rem]">
-            Passionate full stack developer exploring diverse tech stacks
+        <div class="w-1/2 me-12 my-auto">
+          <!-- <h2 class="heading">What I do</h2> -->
+          <div class="sub-title text-sub-title pt-[1rem] text-justify">
+            I create responsive, engaging web apps with solid front-end and
+            back-end foundations
           </div>
-          <div class="flex flex-wrap gap-3 my-12">
+          <div class="flex flex-wrap justify-center gap-3 m-12">
             <div class="mx-3">
-              <i class="what_i_do-icon fa-brands fa-html5"></i>
+              <i class="what_i_do-icon text-orange-600 fa-brands fa-html5"></i>
               <p class="what_i_do-icon_text">Html-5</p>
             </div>
             <div class="mx-3">
-              <i class="what_i_do-icon fa-brands fa-css3-alt"></i>
+              <i class="what_i_do-icon text-blue-800 fa-brands fa-css3-alt"></i>
               <p class="what_i_do-icon_text">Css-3</p>
             </div>
             <div class="mx-3">
-              <i class="what_i_do-icon fa-brands fa-sass"></i>
+              <i class="what_i_do-icon text-pink-600 fa-brands fa-sass"></i>
               <p class="what_i_do-icon_text">Sass</p>
             </div>
             <div class="mx-3">
-              <i class="what_i_do-icon fa-brands fa-square-js"></i>
+              <i
+                class="what_i_do-icon text-yellow-400 fa-brands fa-square-js"
+              ></i>
               <p class="what_i_do-icon_text">JavaScript</p>
             </div>
             <div class="mx-3">
-              <i class="what_i_do-icon fa-brands fa-angular"></i>
+              <i class="what_i_do-icon text-red-600 fa-brands fa-angular"></i>
               <p class="what_i_do-icon_text">Angular 18</p>
             </div>
             <div class="mx-3">
-              <i class="what_i_do-icon fa-solid fa-database"></i>
+              <i
+                class="what_i_do-icon text-indigo-500 fa-solid fa-database"
+              ></i>
               <p class="what_i_do-icon_text">Sql-server</p>
             </div>
             <div class="mx-3">
               <img
-                class="what_i_do-icon what_i_do-custom_icon"
+                class="what_i_do-icon"
                 src="../assets/images/asp.net.png"
                 alt=""
               />
@@ -597,7 +903,7 @@
 
             <div class="mx-3">
               <img
-                class="what_i_do-icon what_i_do-custom_icon"
+                class="what_i_do-icon"
                 src="../assets/images/CSharp.png"
                 alt=""
               />
@@ -606,7 +912,7 @@
 
             <div class="mx-3">
               <img
-                class="what_i_do-icon what_i_do-custom_icon"
+                class="what_i_do-icon"
                 src="../assets/images/Tailwind.png"
                 alt=""
               />
@@ -617,20 +923,21 @@
           <ul>
             <li class="my-4">
               <p class="sub-title text-xl mark">
-                <i class="mark fa-solid fa-bolt"></i> Angular & .NET Core
-                developer with a passion for full-stack web development
+                <i class="mark fa-solid fa-bolt"></i> Transform complex business
+                needs into intuitive UIs
               </p>
             </li>
             <li class="my-4">
               <p class="sub-title text-xl">
-                <i class="mark fa-solid fa-bolt"></i> Build modern, responsive,
-                and user-friendly web applications
+                <i class="mark fa-solid fa-bolt"></i> Build secure and scalable
+                APIs using .NET Core
               </p>
             </li>
+
             <li class="my-4">
               <p class="sub-title text-xl">
-                <i class="mark fa-solid fa-bolt"></i> Write clean, maintainable,
-                and scalable code for long-term projects
+                <i class="mark fa-solid fa-bolt"></i> Collaborate in agile
+                environments and CI/CD pipelines
               </p>
             </li>
           </ul>
@@ -751,6 +1058,74 @@
       </div>
     </section>
 
+    <section id="experiences">
+      <h1 class="experience-title">Experiences</h1>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-date">
+            <img src="assets/images/internship.jpg" />
+            <div>February 2024</div>
+          </div>
+          <div class="timeline-content">
+            <h2>Internship <span>(.Net)</span></h2>
+            <p class="sub-title">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad saepe
+              nulla quibusdam ut. Beatae, facere sequi blanditiis porro suscipit
+              tempore ipsam iste ipsa, culpa quam vero, dolorem cupiditate.
+              Magni, numquam?<button type="button" class="visit">
+                Visit ›
+              </button>
+            </p>
+            <br />
+            <br />
+            <br />
+            <br />
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">
+            <img src="assets/images/be-dev.jpg" />
+            <div>May 2024</div>
+          </div>
+          <div class="timeline-content">
+            <h2>Back-end developer <span>(C#, ASP.Net)</span></h2>
+            <p class="sub-title">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad saepe
+              nulla quibusdam ut. Beatae, facere sequi blanditiis porro suscipit
+              tempore ipsam iste ipsa, culpa quam vero, dolorem cupiditate.
+              Magni, numquam?<button type="button" class="visit">
+                Visit ›
+              </button>
+            </p>
+            <br />
+            <br />
+            <br />
+            <br />
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">
+            <img src="assets/images/fe-dev.jpg" />
+            <div>January 2025 - Current</div>
+          </div>
+          <div class="timeline-content">
+            <h2>Full-stack developer<span>(Angular, ASP.Net)</span></h2>
+            <p class="sub-title">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad saepe
+              nulla quibusdam ut. Beatae, facere sequi blanditiis porro suscipit
+              tempore ipsam iste ipsa, culpa quam vero, dolorem cupiditate.
+              Magni, numquam?<button type="button" class="visit">
+                Visit ›
+              </button>
+            </p>
+            <br />
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="education" class="container">
       <div class="education-section" id="education">
         <h1 class="heading">Education & Achievements</h1>
@@ -842,11 +1217,42 @@
             "Junior Full-Stack Developer | Software Developer"
           </p>
 
-          <div class="social-media">
-            <a href=""><i class="fab fa-github"></i></a>
-            <a href=""><i class="fab fa-linkedin-in"></i></a>
-            <a href=""><i class="fa-solid fa-envelope"></i></a>
-            <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+          <div class="social-media flex mt-3">
+            <div class="me-3">
+              <a
+                href="#"
+                class="w-[2.5rem] h-[2.5rem] rounded-[100%] bg-black flex justify-center items-center"
+              >
+                <i class="text-white text-2xl fab fa-github"></i>
+              </a>
+            </div>
+
+            <div class="me-3">
+              <a
+                href="#"
+                class="w-[2.5rem] h-[2.5rem] rounded-[100%] bg-sky-700 flex justify-center items-center"
+              >
+                <i class="text-white text-xl fab fa-linkedin-in"></i>
+              </a>
+            </div>
+
+            <div class="me-3">
+              <a
+                href="#"
+                class="w-[2.5rem] h-[2.5rem] rounded-[100%] bg-red-500 flex justify-center items-center"
+              >
+                <i class="text-white text-xl fa-solid fa-envelope"></i>
+              </a>
+            </div>
+
+            <div class="me-3">
+              <a
+                href="#"
+                class="w-[2.5rem] h-[2.5rem] rounded-[100%] bg-cyan-700 flex justify-center items-center"
+              >
+                <i class="text-white text-xl fab fa-facebook-f"></i>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -863,7 +1269,7 @@
         renderer: "svg",
         loop: true,
         autoplay: true,
-        path: "assets/lottie/landingPerson.json",
+        path: "assets/lottie/intro.json",
       });
 
       lottie.loadAnimation({
@@ -871,7 +1277,7 @@
         renderer: "svg",
         loop: true,
         autoplay: true,
-        path: "assets/lottie/coding.json",
+        path: "assets/lottie/skill.json",
       });
 
       lottie.loadAnimation({
@@ -879,7 +1285,7 @@
         renderer: "svg",
         loop: true,
         autoplay: true,
-        path: "assets/lottie/skill.json",
+        path: "assets/lottie/tech-stack.json",
       });
     } else {
       document.getElementById("lottie-introduce").innerHTML = `
