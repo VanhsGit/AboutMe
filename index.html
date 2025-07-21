@@ -23,6 +23,25 @@
       html {
         scroll-behavior: smooth;
       }
+
+      @media screen and (max-width: 1024px) {
+        html {
+          font-size: 15px;
+        }
+      }
+
+      @media screen and (max-width: 767px) {
+        html {
+          font-size: 15px;
+        }
+      }
+
+      @media screen and (max-width: 639px) {
+        html {
+          font-size: 14px;
+        }
+      }
+
       body,
       a,
       p {
@@ -212,6 +231,7 @@
         font-size: 1.063rem;
         line-height: 1.5rem;
       }
+
       .certificate-card {
         border-radius: 25px;
         -webkit-transition: all 0.3s ease;
@@ -235,14 +255,23 @@
         box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px -10px;
       }
 
-      .achievement-cards-div {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 1rem 1rem;
-      }
+      @media screen and (max-width: 1023px) {
+        .certificate-card {
+          width: 100% !important;
+          max-width: 639px;
+          height: max-content !important;
+          display: flex;
+        }
 
-      span.certificate-tag:hover {
-        background: #8c43ce;
+        .certificate-card:hover .card-title,
+        .certificate-card:hover .card-sub-title {
+          color: #fff !important;
+        }
+
+        .certificate-detail-div {
+          text-align: center;
+          padding: 0.5rem 1.5rem 1.5rem 1.5rem;
+        }
       }
 
       .contact-desc {
@@ -255,7 +284,7 @@
         padding: 1.5rem;
         border-radius: 10px;
         border: 1px solid rgba(211, 211, 211, 0.397);
-        width: 340px;
+        width: 21.25rem;
         aspect-ratio: 2.08 / 1;
       }
 
@@ -546,7 +575,7 @@
     </style>
   </head>
   <body>
-    <div
+    <!-- <div
       id="loading"
       class="fixed w-[100vw] h-[100vh] bg-white z-50 flex flex-col justify-center items-center"
     >
@@ -558,11 +587,11 @@
         src="assets/images/signature.png"
         alt=""
       />
-    </div>
+    </div> -->
     <a
       href="#header"
       id="scroll-to-top"
-      class="fixed right-[1rem] bottom-[1rem] w-[3rem] h-[3rem] border-1 rounded-[100%] flex items-center justify-center"
+      class="fixed right-[1rem] bottom-[1rem] w-[3rem] h-[3rem] border-1 rounded-[100%] bg-white flex items-center justify-center"
     >
       <i
         class="fa-solid fa-feather-pointed text-2xl bg-white text-[#1e6091]"
@@ -783,7 +812,9 @@
 
     <section id="tech-stack" class="mt-[6rem]">
       <div class="container flex justify-between flex-wrap">
-        <div class="max-w-[100vw] justify-between gap-4 flex flex-col grow">
+        <div
+          class="max-w-[100vw] justify-between gap-4 flex flex-col grow px-4 lg:px-0"
+        >
           <div class="skill-card hover-primary ms-auto lg:me-12">
             <div class="flex justify-between items-center my-2">
               <p class="skill-card_title font-medium text-2xl">Tech stack</p>
@@ -799,7 +830,8 @@
               Angular 18, Tailwind CSS, ASP.NET Core 8, SQL Server
             </p>
           </div>
-          <div class="skill-card hover-primary ms-auto lg:me-36">
+
+          <div class="skill-card hover-primary ms-0 lg:ms-auto lg:me-36">
             <div class="flex justify-between items-center my-2">
               <p class="skill-card_title font-medium text-2xl">
                 Tools & Workflow
@@ -816,6 +848,7 @@
               Git, Bitbucket, Jira, Agile/Scrum
             </p>
           </div>
+
           <div class="skill-card hover-primary ms-auto lg:me-12">
             <div class="flex justify-between items-center my-2">
               <p class="skill-card_title font-medium text-2xl">
@@ -847,7 +880,7 @@
         </div>
 
         <div
-          class="max-w-[100vw] ms-4 justify-between gap-4 flex flex-col grow"
+          class="max-w-[100vw] justify-between gap-4 flex flex-col grow px-4 lg:px-0"
         >
           <div class="skill-card hover-primary lg:ms-12">
             <div class="flex justify-between items-center my-2">
@@ -865,7 +898,7 @@
             </p>
           </div>
 
-          <div class="skill-card hover-primary lg:ms-36">
+          <div class="skill-card hover-primary ms-auto lg:ms-36">
             <div class="flex justify-between items-center my-2">
               <p class="skill-card_title font-medium text-2xl">Testing</p>
               <div
@@ -967,9 +1000,9 @@
     </section>
 
     <section id="education" class="container">
-      <div class="flex items-center">
-        <div class="w-3/5">
-          <p class="text-[74px] font-medium">
+      <div class="flex flex-col lg:flex-row items-center">
+        <div class="px-4 lg:px-0 lg:w-3/5">
+          <p class="text-[4.6rem] font-medium">
             University of Information Technology
           </p>
 
@@ -977,24 +1010,24 @@
             Major: Computer Science (2020 – 2024)
           </p>
         </div>
-        <div class="w-2/5">
+        <div class="lg:w-2/5">
           <div
             class="greeting-image-div w-[30rem] mx-auto"
             id="lottie-graduation"
           ></div>
         </div>
       </div>
-      <div class="flex">
-        <div class="w-1/5"></div>
-        <div class="w-4/5">
+      <div class="flex flex-col lg:flex-row">
+        <div class="lg:w-1/5"></div>
+        <div class="lg:w-4/5 px-4 lg:px-0">
           <p class="sub-title text-[23px] text-end">
             In addition to my university education, I have actively pursued
             online courses to broaden my knowledge and strengthen my practical
             skills
           </p>
-          <div class="w-full flex gap-[1rem] my-12 justify-end">
+          <div class="w-full flex flex-wrap gap-[1rem] my-12 justify-end">
             <div class="certificate-card bg-[#ffafcc] hover-primary">
-              <img src="assets/images/udemy.png" class="card-image" />
+              <img src="assets/images/udemy.png" class="card-image shrink-0" />
               <div class="certificate-detail-div">
                 <h5 class="card-title">Ultimate C# Masterclass</h5>
                 <p class="card-sub-title">
@@ -1003,10 +1036,9 @@
                 </p>
               </div>
             </div>
+
             <div class="certificate-card bg-[#acf1ff] hover-primary">
-              <div class="certificate-image-div">
-                <img src="assets/images/udemy.png" class="card-image" />
-              </div>
+              <img src="assets/images/udemy.png" class="card-image shrink-0" />
               <div class="certificate-detail-div">
                 <h5 class="card-title">Ultimate C# Masterclass</h5>
                 <p class="card-sub-title">
@@ -1015,10 +1047,9 @@
                 </p>
               </div>
             </div>
+
             <div class="certificate-card bg-[#d6d5ff] hover-primary">
-              <div class="certificate-image-div">
-                <img src="assets/images/udemy.png" class="card-image" />
-              </div>
+              <img src="assets/images/udemy.png" class="card-image shrink-0" />
               <div class="certificate-detail-div">
                 <h5 class="card-title">Ultimate C# Masterclass</h5>
                 <p class="card-sub-title">
@@ -1114,10 +1145,10 @@
 
         document.body.style.overflow = "auto";
 
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth",
-        });
+        // window.scrollTo({
+        //   top: 0,
+        //   behavior: "smooth",
+        // });
       }, 2500);
     });
 
