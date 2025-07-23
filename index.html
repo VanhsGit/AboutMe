@@ -540,7 +540,7 @@
 
       #education {
         width: 100%;
-        height: 42rem;
+        height: 36rem;
         background-color: #fff;
       }
 
@@ -551,7 +551,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(128, 128, 128, 0.1);
+        background-color: rgba(196, 193, 193, 0.1);
         pointer-events: none;
       }
 
@@ -561,6 +561,15 @@
         position: absolute;
         right: 5%;
         top: 12%;
+        opacity: 0.5;
+      }
+
+      #education > .image-lotie-1 {
+        width: 24rem;
+        height: auto;
+        position: absolute;
+        left: 40%;
+        bottom: 5%;
         opacity: 0.5;
       }
 
@@ -575,17 +584,15 @@
       }
 
       #education .text {
-        color: rgba(0, 0, 0, 0.7);
-      }
-
-      #education .sub-text {
-        color: rgba(0, 0, 0, 0.5);
+        color: #014f86;
       }
 
       .achievement-card {
-        opacity: 0.8;
-      }
+        background-color: transparent;
+        background-color: rgba(255, 255, 255, 0.8);
 
+        box-shadow: rgba(0, 0, 0, 0.6) 0px 10px 30px -15px;
+      }
       .achievement-card > .logo {
         top: 36px;
         left: 0;
@@ -611,7 +618,7 @@
     </style>
   </head>
   <body>
-    <!-- <div
+    <div
       id="loading"
       class="fixed w-[100vw] h-[100vh] bg-white z-50 flex flex-col justify-center items-center"
     >
@@ -623,7 +630,7 @@
         src="assets/images/signature.png"
         alt=""
       />
-    </div> -->
+    </div>
     <a
       href="#header"
       id="scroll-to-top"
@@ -1035,9 +1042,10 @@
       </div>
     </section>
 
-    <section id="education" class="flex relative">
+    <!-- <section id="education" class="flex relative">
       <img class="image-lotie" src="/assets/images/education.png" alt="" />
       <img class="logo-uit" src="/assets/images/UIT-Logo.png" alt="" />
+      <img class="image-lotie-1" src="/assets/images/education-1.png" alt="" />
       <div class="container flex">
         <div class="w-2/5">
           <p class="text-[2.5rem] text">
@@ -1055,8 +1063,10 @@
           </p>
         </div>
 
-        <div class="w-3/5 relative flex justify-center items-center flex gap-[2.5rem]">
-          <div class="flex flex-col gap-[2.5rem] mt-[20rem]">
+        <div
+          class="w-3/5 relative flex justify-center items-center flex gap-[2.5rem]"
+        >
+          <div class="flex flex-col gap-[2.5rem] mt-[12rem] items-end">
             <div
               class="achievement-card rounded-[8px] bg-white w-[20rem] h-[20rem] relative"
             >
@@ -1081,7 +1091,7 @@
             </div>
 
             <div
-              class="achievement-card rounded-[8px] bg-white w-[20rem] h-[20rem] relative"
+              class="achievement-card rounded-[8px] bg-white w-[25rem] h-[15rem] relative"
             >
               <img
                 src="/assets/images/udemy.png"
@@ -1104,9 +1114,9 @@
             </div>
           </div>
 
-          <div  class="flex flex-col gap-[2.5rem]">
+          <div class="flex flex-col gap-[2.5rem] mb-[10rem]">
             <div
-              class="achievement-card rounded-[8px] bg-white w-[20rem] h-[20rem] relative"
+              class="achievement-card rounded-[8px] bg-white w-[30rem] h-[16rem] relative"
             >
               <img
                 src="/assets/images/udemy.png"
@@ -1129,7 +1139,7 @@
             </div>
 
             <div
-              class="achievement-card rounded-[8px] bg-white w-[20rem] h-[20rem] relative"
+              class="achievement-card rounded-[8px] bg-white w-[22rem] h-[18rem] relative"
             >
               <img
                 src="/assets/images/udemy.png"
@@ -1153,7 +1163,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <section id="contact" class="container px-4 lg:px-0">
       <p class="heading">Reach Out to me!</p>
@@ -1167,7 +1177,7 @@
             always open to connecting and learning from new perspectives.
           </div>
           <p class="text-sub-title font-medium my-4">
-            "Junior Full-Stack Developer | Software Developer"
+            "Full-Stack Developer | Software Developer"
           </p>
 
           <div class="social-media flex my-4">
@@ -1225,24 +1235,24 @@
     </section>
   </body>
   <script>
-    // document.body.style.overflow = "hidden";
+    document.body.style.overflow = "hidden";
 
-    // window.addEventListener("load", () => {
-    //   setTimeout(() => {
-    //     const loading = document.getElementById("loading");
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        const loading = document.getElementById("loading");
 
-    //     if (loading) {
-    //       loading.style.display = "none";
-    //     }
+        if (loading) {
+          loading.style.display = "none";
+        }
 
-    //     document.body.style.overflow = "auto";
+        document.body.style.overflow = "auto";
 
-    //     window.scrollTo({
-    //       top: 0,
-    //       behavior: "smooth",
-    //     });
-    //   }, 2500);
-    // });
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }, 2500);
+    });
 
     const illustration = {
       animated: true,
