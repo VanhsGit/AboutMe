@@ -232,42 +232,7 @@
         line-height: 1.5rem;
       }
 
-      .certificate-card {
-        border-radius: 25px;
-        -webkit-transition: all 0.3s ease;
-        -o-transition: all 0.3s ease;
-        transition: all 0.3s ease;
-        padding: 1rem;
-        width: 320px;
-        height: 380px;
-      }
-
-      .certificate-card:hover .card-title,
-      .certificate-card:hover .card-sub-title {
-        color: #fff !important;
-      }
-
-      .certificate-detail-div {
-        text-align: center;
-        padding: 0.5rem 1.5rem 1.5rem 1.5rem;
-      }
-      .certificate-card:hover {
-        box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px -10px;
-      }
-
       @media screen and (max-width: 1023px) {
-        .certificate-card {
-          width: 100% !important;
-          max-width: 639px;
-          height: max-content !important;
-          display: flex;
-        }
-
-        .certificate-card:hover .card-title,
-        .certificate-card:hover .card-sub-title {
-          color: #fff !important;
-        }
-
         .certificate-detail-div {
           text-align: center;
           padding: 0.5rem 1.5rem 1.5rem 1.5rem;
@@ -319,7 +284,7 @@
       .experience-title {
         text-align: center;
         margin-bottom: 80px;
-        font-size: 2em;
+        font-size: 2.5em;
         color: #014f86;
         position: relative;
         margin-top: 40px;
@@ -571,6 +536,77 @@
           left: 15px;
           right: inherit;
         }
+      }
+
+      #education {
+        width: 100%;
+        height: 42rem;
+        background-color: #fff;
+      }
+
+      #education::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(128, 128, 128, 0.1);
+        pointer-events: none;
+      }
+
+      #education > .image-lotie {
+        width: 24rem;
+        height: auto;
+        position: absolute;
+        right: 5%;
+        top: 12%;
+        opacity: 0.5;
+      }
+
+      #education > .logo-uit {
+        width: 22rem;
+        height: auto;
+        position: absolute;
+        left: 20%;
+        top: 12%;
+        filter: grayscale(0.7);
+        opacity: 0.2;
+      }
+
+      #education .text {
+        color: rgba(0, 0, 0, 0.7);
+      }
+
+      #education .sub-text {
+        color: rgba(0, 0, 0, 0.5);
+      }
+
+      .achievement-card {
+        opacity: 0.8;
+      }
+
+      .achievement-card > .logo {
+        top: 36px;
+        left: 0;
+        transform: translateX(-50%);
+        width: 52px;
+        height: 52px;
+        border-radius: 100%;
+        overflow: hidden;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 30px -15px;
+      }
+
+      .achievement-card > .platform {
+        top: 0;
+        right: 10%;
+        transform: translateY(-50%);
+        width: 52px;
+        height: 52px;
+        border-radius: 100%;
+        overflow: hidden;
+        background-color: #fff;
+        box-shadow: rgba(0, 0, 0, 0.7) 0px 10px 30px -15px;
       }
     </style>
   </head>
@@ -999,62 +1035,118 @@
       </div>
     </section>
 
-    <section id="education" class="container">
-      <div class="flex flex-col lg:flex-row items-center">
-        <div class="px-4 lg:px-0 lg:w-3/5">
-          <p class="text-[4.6rem] font-medium">
-            University of Information Technology
+    <section id="education" class="flex relative">
+      <img class="image-lotie" src="/assets/images/education.png" alt="" />
+      <img class="logo-uit" src="/assets/images/UIT-Logo.png" alt="" />
+      <div class="container flex">
+        <div class="w-2/5">
+          <p class="text-[2.5rem] text">
+            University of <br />
+            Information Technology
           </p>
+          <div class="my-2">
+            <p class="text">Major: Computer Science ( 2020 - 2024 )</p>
+          </div>
+          <p class="text leading-7">
+            From 2020 to 2024, I pursued my studies at the UIT. Throughout this
+            period, I actively engaged in various enriching activities including
+            volunteering, competing in algorithm contests, and taking on a
+            leadership role as the vice secretary of the faculty’s youth union.
+          </p>
+        </div>
 
-          <p class="sub-title text-[23px]">
-            Major: Computer Science (2020 – 2024)
-          </p>
-        </div>
-        <div class="lg:w-2/5">
-          <div
-            class="greeting-image-div w-[30rem] mx-auto"
-            id="lottie-graduation"
-          ></div>
-        </div>
-      </div>
-      <div class="flex flex-col lg:flex-row">
-        <div class="lg:w-1/5"></div>
-        <div class="lg:w-4/5 px-4 lg:px-0">
-          <p class="sub-title text-[23px] text-end">
-            In addition to my university education, I have actively pursued
-            online courses to broaden my knowledge and strengthen my practical
-            skills
-          </p>
-          <div class="w-full flex flex-wrap gap-[1rem] my-12 justify-end">
-            <div class="certificate-card bg-[#ffafcc] hover-primary">
-              <img src="assets/images/udemy.png" class="card-image shrink-0" />
-              <div class="certificate-detail-div">
-                <h5 class="card-title">Ultimate C# Masterclass</h5>
-                <p class="card-sub-title">
-                  In-depth .NET programming course from basics to advanced.
-                  Focus on clean code, performance and practice.
+        <div class="w-3/5 relative flex justify-center items-center flex gap-[2.5rem]">
+          <div class="flex flex-col gap-[2.5rem] mt-[20rem]">
+            <div
+              class="achievement-card rounded-[8px] bg-white w-[20rem] h-[20rem] relative"
+            >
+              <img
+                src="/assets/images/udemy.png"
+                class="logo absolute"
+                alt=""
+              />
+              <div class="platform absolute flex justify-center items-center">
+                <i class="text-4xl text-red-600 fa-brands fa-angular"></i>
+              </div>
+
+              <div class="ps-[2.5rem] pt-[2rem] pe-[1rem]">
+                <div class="mb-3">
+                  <p class="text-[1.5rem]">Ultimate C# Masterclass</p>
+                </div>
+                <p class="sub-title">
+                  In-depth .NET programming course from basics to advanced with
+                  OOP & LINQ. Focus on clean code, performance and practice.
                 </p>
               </div>
             </div>
 
-            <div class="certificate-card bg-[#acf1ff] hover-primary">
-              <img src="assets/images/udemy.png" class="card-image shrink-0" />
-              <div class="certificate-detail-div">
-                <h5 class="card-title">Ultimate C# Masterclass</h5>
-                <p class="card-sub-title">
-                  In-depth .NET programming course from basics to advanced.
-                  Focus on clean code, performance and practice.
+            <div
+              class="achievement-card rounded-[8px] bg-white w-[20rem] h-[20rem] relative"
+            >
+              <img
+                src="/assets/images/udemy.png"
+                class="logo absolute"
+                alt=""
+              />
+              <div class="platform absolute flex justify-center items-center">
+                <i class="text-4xl text-red-600 fa-brands fa-angular"></i>
+              </div>
+
+              <div class="ps-[2.5rem] pt-[2rem] pe-[1rem]">
+                <div class="mb-3">
+                  <p class="text-[1.5rem]">Ultimate C# Masterclass</p>
+                </div>
+                <p class="sub-title">
+                  In-depth .NET programming course from basics to advanced with
+                  OOP & LINQ. Focus on clean code, performance and practice.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div  class="flex flex-col gap-[2.5rem]">
+            <div
+              class="achievement-card rounded-[8px] bg-white w-[20rem] h-[20rem] relative"
+            >
+              <img
+                src="/assets/images/udemy.png"
+                class="logo absolute"
+                alt=""
+              />
+              <div class="platform absolute flex justify-center items-center">
+                <i class="text-4xl text-red-600 fa-brands fa-angular"></i>
+              </div>
+
+              <div class="ps-[2.5rem] pt-[2rem] pe-[1rem]">
+                <div class="mb-3">
+                  <p class="text-[1.5rem]">Ultimate C# Masterclass</p>
+                </div>
+                <p class="sub-title">
+                  In-depth .NET programming course from basics to advanced with
+                  OOP & LINQ. Focus on clean code, performance and practice.
                 </p>
               </div>
             </div>
 
-            <div class="certificate-card bg-[#d6d5ff] hover-primary">
-              <img src="assets/images/udemy.png" class="card-image shrink-0" />
-              <div class="certificate-detail-div">
-                <h5 class="card-title">Ultimate C# Masterclass</h5>
-                <p class="card-sub-title">
-                  In-depth .NET programming course from basics to advanced.
-                  Focus on clean code, performance and practice.
+            <div
+              class="achievement-card rounded-[8px] bg-white w-[20rem] h-[20rem] relative"
+            >
+              <img
+                src="/assets/images/udemy.png"
+                class="logo absolute"
+                alt=""
+              />
+              <div class="platform absolute flex justify-center items-center">
+                <i class="text-4xl text-red-600 fa-brands fa-angular"></i>
+              </div>
+
+              <div class="ps-[2.5rem] pt-[2rem] pe-[1rem]">
+                <div class="mb-3">
+                  <p class="text-[1.5rem]">Ultimate C# Masterclass</p>
+                </div>
+                <p class="sub-title">
+                  In-depth .NET programming course from basics to advanced with
+                  OOP & LINQ. Focus on clean code, performance and practice.
                 </p>
               </div>
             </div>
@@ -1133,24 +1225,24 @@
     </section>
   </body>
   <script>
-    document.body.style.overflow = "hidden";
+    // document.body.style.overflow = "hidden";
 
-    window.addEventListener("load", () => {
-      setTimeout(() => {
-        const loading = document.getElementById("loading");
+    // window.addEventListener("load", () => {
+    //   setTimeout(() => {
+    //     const loading = document.getElementById("loading");
 
-        if (loading) {
-          loading.style.display = "none";
-        }
+    //     if (loading) {
+    //       loading.style.display = "none";
+    //     }
 
-        document.body.style.overflow = "auto";
+    //     document.body.style.overflow = "auto";
 
-        // window.scrollTo({
-        //   top: 0,
-        //   behavior: "smooth",
-        // });
-      }, 2500);
-    });
+    //     window.scrollTo({
+    //       top: 0,
+    //       behavior: "smooth",
+    //     });
+    //   }, 2500);
+    // });
 
     const illustration = {
       animated: true,
