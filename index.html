@@ -54,6 +54,10 @@
         margin: 10rem auto;
       }
 
+      .container-header {
+        margin: 0 auto;
+      }
+
       .wave-emoji {
         animation-duration: 1.8s;
         animation-iteration-count: infinite;
@@ -118,14 +122,19 @@
         .container {
           margin: 7rem auto;
         }
+        .container-header {
+          margin: 0 auto;
+        }
       }
       @media (max-width: 768px) {
         .container {
           margin: 4rem auto;
         }
-        .button-greeting-div {
-          justify-content: space-around;
+
+        .container-header {
+          margin: 0 auto;
         }
+
         .greeting-text {
           font-size: 30px;
           text-align: center;
@@ -133,7 +142,6 @@
         .greeting-text-p {
           font-size: 16px;
           line-height: normal;
-          text-align: center;
         }
         .greeting-main {
           display: block;
@@ -214,7 +222,6 @@
         font-weight: 700;
         width: max-content;
         padding: 13px 22px;
-        margin-right: 2.5rem;
         text-transform: uppercase;
         border-radius: 6px;
         text-align: center;
@@ -237,7 +244,6 @@
         .main-button {
           font-size: 0.938rem;
           padding: 12px 18px;
-          margin-right: 0px;
         }
       }
       @media (max-width: 320px) {
@@ -282,7 +288,6 @@
         padding: 1.5rem;
         border-radius: 10px;
         border: 1px solid rgba(211, 211, 211, 0.397);
-        width: 21.25rem;
         aspect-ratio: 2.08 / 1;
       }
 
@@ -531,6 +536,17 @@
         color: #ffffff;
       }
       @media (max-width: 767px) {
+        #education > .logo-uit {
+          width: 22rem;
+          max-width: 100%;
+          height: auto;
+          position: absolute;
+          left: 0;
+          top: 5%;
+          filter: grayscale(0.7);
+          opacity: 0.2;
+        }
+
         .timeline > .timeline-item {
           flex-direction: column;
           border-left: 2px solid #e0e0e0;
@@ -659,7 +675,7 @@
     </style>
   </head>
   <body>
-    <div
+    <!-- <div
       id="loading"
       class="fixed w-[100vw] h-[100vh] bg-white z-50 flex flex-col justify-center items-center z-50"
     >
@@ -671,7 +687,7 @@
         src="assets/images/signature.png"
         alt=""
       />
-    </div>
+    </div> -->
     <a
       href="#header"
       id="scroll-to-top"
@@ -682,7 +698,10 @@
       ></i>
     </a>
 
-    <header id="header" class="flex justify-between px-[2rem] items-center">
+    <header
+      id="header"
+      class="flex justify-between items-center container container-header px-4 sm:px-0 lg:px-4 2xl:px-0"
+    >
       <img
         class="w-[12rem] lg:w-[20rem]"
         src="assets/images/signature.png"
@@ -692,7 +711,7 @@
         <i class="fa-solid fa-align-right text-xl"></i>
       </div>
 
-      <ul class="hidden lg:flex justify-end px-[2rem] py-[1rem]">
+      <ul class="hidden lg:flex justify-end px-[2rem] py-[1rem] pe-0">
         <li class="py-[0.5rem] px-[1rem] hover:bg-gray-100">
           <a class="text-[1.25rem]" href="#introduce">About me</a>
         </li>
@@ -781,10 +800,10 @@
         class="container flex flex-col-reverse lg:flex-row justify-between gap-3"
       >
         <div class="lg:w-1/2">
-          <h1 class="greeting-text font-medium">
+          <h1 class="greeting-text font-medium px-4">
             Hi all, I'm Nghĩa <span class="wave-emoji">👋</span>
           </h1>
-          <div class="greeting-text-p sub-title px-2">
+          <div class="greeting-text-p text-center md:text-start sub-title px-4">
             A full-stack web developer focused on building modern and
             maintainable web applications with Angular and .NET Core. I'm driven
             by curiosity, clean architecture, and the joy of turning complex
@@ -792,7 +811,7 @@
           </div>
 
           <div
-            class="social-media flex justify-center lg:justify-start my-4 mt-6"
+            class="social-media flex justify-center justify-center md:justify-start my-4 mt-6 px-4"
           >
             <div class="me-3">
               <a
@@ -854,7 +873,7 @@
             </div>
           </div>
           <div>
-            <div class="button-greeting-div flex">
+            <div class="flex justify-evenly md:justify-start px-4 md:gap-12">
               <a class="main-button" href="#contact">
                 <button>Contact me</button>
               </a>
@@ -887,7 +906,7 @@
             I create responsive, engaging web apps with solid front-end and
             back-end foundations
           </div>
-          <div class="flex flex-wrap justify-center gap-3 m-12">
+          <div class="flex flex-wrap justify-center gap-3 m-4 md:m-12">
             <div class="mx-3">
               <i class="what_i_do-icon text-orange-600 fa-brands fa-html5"></i>
               <p class="what_i_do-icon_text">Html-5</p>
@@ -970,78 +989,86 @@
     </section>
 
     <section id="tech-stack" class="mt-[6rem]">
-      <div class="container flex justify-between flex-wrap">
-        <div
-          class="max-w-[100vw] justify-between gap-4 flex flex-col grow px-4 lg:px-0"
-        >
-          <div class="skill-card hover-primary ms-auto lg:me-12">
-            <div class="flex justify-between items-center my-2">
-              <p class="skill-card_title font-medium text-2xl">Tech stack</p>
-              <div
-                class="skill-card_border-icon w-12 h-12 rounded-[100%] border-1 flex justify-center items-center"
-              >
-                <i
-                  class="skill-card_icon text-xl mark fa-solid fa-laptop-code"
-                ></i>
-              </div>
-            </div>
-            <p class="skill-card_desc sub-title">
-              Angular 18, Tailwind CSS, ASP.NET Core 8, SQL Server
-            </p>
-          </div>
-
-          <div class="skill-card hover-primary ms-0 lg:ms-auto lg:me-36">
-            <div class="flex justify-between items-center my-2">
-              <p class="skill-card_title font-medium text-2xl">
-                Tools & Workflow
-              </p>
-              <div
-                class="skill-card_border-icon w-12 h-12 rounded-[100%] border-1 flex justify-center items-center"
-              >
-                <i
-                  class="skill-card_icon text-xl mark fa-solid fa-trowel-bricks"
-                ></i>
-              </div>
-            </div>
-            <p class="skill-card_desc sub-title">
-              Git, Bitbucket, Jira, Agile/Scrum
-            </p>
-          </div>
-
-          <div class="skill-card hover-primary ms-auto lg:me-12">
-            <div class="flex justify-between items-center my-2">
-              <p class="skill-card_title font-medium text-2xl">
-                State Management
-              </p>
-              <div
-                class="skill-card_border-icon w-12 h-12 rounded-[100%] border-1 flex justify-center items-center"
-              >
-                <i
-                  class="skill-card_icon text-xl mark fa-solid fa-chart-simple"
-                ></i>
-              </div>
-            </div>
-            <p class="skill-card_desc sub-title">
-              Signals, NgRx, RxJS, Reactive Forms
-            </p>
-          </div>
-        </div>
-
-        <div>
+      <div class="container flex justify-between flex-wrap overflow-hidden">
+        <div class="flex items-center w-full sm:w-auto">
           <div
-            class="overflow-hidden flex justify-center w-[34rem] max-w-[100vw] h-[15rem] lg:h-[34rem] my-[2rem]"
+            class="max-w-[100vw] justify-between gap-4 flex flex-col grow px-4 lg:px-0"
           >
             <div
-              class="w-[40rem] h-[40rem] greeting-image-div"
-              id="lottie_tech-stack"
-            ></div>
+              class="skill-card sm:w-[21.25rem] w-full hover-primary md:ms-auto lg:me-12"
+            >
+              <div class="flex justify-between items-center my-2">
+                <p class="skill-card_title font-medium text-2xl">Tech stack</p>
+                <div
+                  class="skill-card_border-icon w-12 h-12 rounded-[100%] border-1 flex justify-center items-center"
+                >
+                  <i
+                    class="skill-card_icon text-xl mark fa-solid fa-laptop-code"
+                  ></i>
+                </div>
+              </div>
+              <p class="skill-card_desc sub-title">
+                Angular 18, Tailwind CSS, ASP.NET Core 8, SQL Server
+              </p>
+            </div>
+
+            <div
+              class="skill-card sm:w-[21.25rem] w-full hover-primary ms-0 md:ms-2 xl:ms-auto lg:me-36"
+            >
+              <div class="flex justify-between items-center my-2">
+                <p class="skill-card_title font-medium text-2xl">
+                  Tools & Workflow
+                </p>
+                <div
+                  class="skill-card_border-icon w-12 h-12 rounded-[100%] border-1 flex justify-center items-center"
+                >
+                  <i
+                    class="skill-card_icon text-xl mark fa-solid fa-trowel-bricks"
+                  ></i>
+                </div>
+              </div>
+              <p class="skill-card_desc sub-title">
+                Git, Bitbucket, Jira, Agile/Scrum
+              </p>
+            </div>
+
+            <div
+              class="skill-card sm:w-[21.25rem] w-full hover-primary ms-auto lg:me-12"
+            >
+              <div class="flex justify-between items-center my-2">
+                <p class="skill-card_title font-medium text-2xl">
+                  State Management
+                </p>
+                <div
+                  class="skill-card_border-icon w-12 h-12 rounded-[100%] border-1 flex justify-center items-center"
+                >
+                  <i
+                    class="skill-card_icon text-xl mark fa-solid fa-chart-simple"
+                  ></i>
+                </div>
+              </div>
+              <p class="skill-card_desc sub-title">
+                Signals, NgRx, RxJS, Reactive Forms
+              </p>
+            </div>
+          </div>
+
+          <div class="hidden lg:block">
+            <div
+              class="overflow-hidden flex justify-center w-[34rem] max-w-[100vw] h-[15rem] lg:h-[34rem] my-[2rem]"
+            >
+              <div
+                class="w-[40rem] h-[40rem] greeting-image-div"
+                id="lottie_tech-stack"
+              ></div>
+            </div>
           </div>
         </div>
 
         <div
-          class="max-w-[100vw] justify-between gap-4 flex flex-col grow px-4 lg:px-0"
+          class="max-w-[100vw] justify-between gap-4 flex flex-col mt-[1.5rem] sm:mt-0 grow px-4 lg:px-0 lg:mt-0"
         >
-          <div class="skill-card hover-primary lg:ms-12">
+          <div class="skill-card sm:w-[21.25rem] w-full hover-primary lg:ms-12">
             <div class="flex justify-between items-center my-2">
               <p class="skill-card_title font-medium text-2xl">API & Auth</p>
               <div
@@ -1057,7 +1084,7 @@
             </p>
           </div>
 
-          <div class="skill-card hover-primary ms-auto lg:ms-36">
+          <div class="skill-card sm:w-[21.25rem] w-full hover-primary lg:ms-36">
             <div class="flex justify-between items-center my-2">
               <p class="skill-card_title font-medium text-2xl">Testing</p>
               <div
@@ -1073,7 +1100,7 @@
             </p>
           </div>
 
-          <div class="skill-card hover-primary lg:ms-12">
+          <div class="skill-card sm:w-[21.25rem] w-full hover-primary lg:ms-12">
             <div class="flex justify-between items-center my-2">
               <p class="skill-card_title font-medium text-2xl">Others</p>
               <div
@@ -1157,8 +1184,7 @@
         </div>
       </div>
     </section>
-
-    <section id="education" class="container hidden lg:flex relative">
+    <section id="education" class="container flex relative">
       <img
         class="hidden lg:block image-lotie"
         src="assets/images/education.png"
@@ -1188,13 +1214,13 @@
         </div>
 
         <div
-          class="lg:w-3/5 relative flex justify-center items-center lg:items-center flex flex-col lg:flex-row gap-[2.5rem]"
+          class="lg:w-3/5 relative hidden 2xl:flex justify-center items-center lg:items-center flex flex-col lg:flex-row gap-[2.5rem]"
         >
           <div
             class="flex flex-col flex-wrap gap-[2.5rem] mt-[2rem] lg:mt-[12rem] items-end"
           >
             <div
-              class="achievement-card hover-primary rounded-[8px] bg-white lg:w-[20rem] mx-2 h-[15rem] lg:h-[20rem] relative"
+              class="achievement-card hover-primary rounded-[8px] bg-white lg:w-[19rem] xl:w-[20rem] mx-2 h-[15rem] lg:h-[20rem] relative"
             >
               <img
                 src="assets/images/udemy.png"
@@ -1248,7 +1274,7 @@
             class="flex flex-row lg:flex-col flex-wrap gap-[2.5rem] lg:mb-[10rem]"
           >
             <div
-              class="achievement-card hover-primary rounded-[8px] bg-white lg:w-[30rem] mx-4 h-[15rem] lg:h-[16rem] relative"
+              class="achievement-card hover-primary rounded-[8px] bg-white lg:w-[30rem] mx-2 h-[15rem] lg:h-[16rem] relative"
             >
               <img
                 src="assets/images/udemy.png"
@@ -1303,10 +1329,10 @@
       </div>
     </section>
 
-    <section id="contact" class="container px-4 lg:px-0">
+    <section id="contact" class="container px-4">
       <p class="heading">Reach Out to me!</p>
       <div class="flex my-8 mt-4">
-        <div class="contact-container lg:w-2/3 lg:pe-8">
+        <div class="contact-container max-w-[992px] lg:pe-8">
           <div class="sub-title text-sub-title mb-4">
             I’m currently seeking new opportunities where I can contribute my
             full-stack development skills, grow professionally, and work on
