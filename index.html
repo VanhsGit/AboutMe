@@ -536,7 +536,7 @@
         color: #ffffff;
       }
       @media (max-width: 767px) {
-        #education > .logo-uit {
+        #education > .logo-uit-wrapper {
           width: 22rem;
           max-width: 100%;
           height: auto;
@@ -609,13 +609,17 @@
         opacity: 0.5;
       }
 
-      #education > .logo-uit {
-        width: 22rem;
-        height: auto;
+      #education > .logo-uit-wrapper {
         position: absolute;
         left: 20%;
         top: 12%;
         opacity: 0.2;
+      }
+
+      .logo-uit {
+        width: 22rem;
+        height: auto;
+        filter: grayscale(0.7);
       }
 
       #education .text {
@@ -1187,7 +1191,10 @@
         src="assets/images/education.png"
         alt=""
       />
-      <img class="logo-uit" src="assets/images/UIT-Logo.png" alt="" />
+      <div class="logo-uit-wrapper">
+        <img class="logo-uit" src="assets/images/UIT-Logo.png" alt="logo" />
+      </div>
+
       <img
         class="hidden lg:block image-lotie-1"
         src="assets/images/education-1.png"
